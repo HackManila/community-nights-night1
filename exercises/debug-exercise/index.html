@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quest Board — HackManila Night 1</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="game.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">HM</span><span>HackManila <small>COMMUNITY NIGHTS</small></span></a>
+    <div class="masthead-actions"><span class="edition">NIGHT 01 / DEBUG</span><a class="text-link" href="tests.html">Run checks <span aria-hidden="true">↗</span></a></div>
+  </header>
+  <main class="layout">
+    <section class="board" aria-labelledby="board-title">
+      <div class="eyebrow">A SMALL PROJECT. A REAL DEVELOPMENT WORKFLOW.</div>
+      <h1 id="board-title">Quest board<span class="title-dot">.</span></h1>
+      <p class="intro">Explore the district. Choose a quest. Verify the result.</p>
+      <div class="stats" aria-label="Player progress">
+        <div><span class="stat-label">EXPERIENCE</span><strong><span id="xp">0</span> <small>XP</small></strong></div>
+        <div><span class="stat-label">COMPLETED</span><strong><span id="completed">0</span><small> / 6</small></strong></div>
+        <div><span class="stat-label">PINNED</span><strong id="pinned">0</strong></div>
+      </div>
+      <form id="filters" class="filters" role="search" aria-label="Filter quests">
+        <label class="search-label"><span class="sr-only">Search quests</span><input id="search" type="search" placeholder="Search quests…" autocomplete="off"></label>
+        <label><span class="sr-only">Category</span><select id="category"><option value="all">All categories</option><option value="exploration">Exploration</option><option value="crafting">Crafting</option><option value="puzzle">Puzzles</option></select></label>
+        <label><span class="sr-only">Status</span><select id="status"><option value="all">All statuses</option><option value="available">Available</option><option value="completed">Completed</option></select></label>
+      </form>
+      <div class="list-heading"><span id="result-count">6 quests</span><span>Pin a quest to move it to the top.</span></div>
+      <div id="quest-list" class="quest-list"></div>
+      <p id="empty" class="empty" hidden>No quests match these filters. Try another search.</p>
+      <div id="notice" class="notice" role="status" aria-live="polite">Debug exercise: the UI appears to work. Check whether the underlying rules do.</div>
+    </section>
+    <aside class="workshop-panel" aria-labelledby="task-title">
+      <div class="panel-label">YOUR WORKSHOP TASK</div>
+      <h2 id="task-title">Make completion<br>mean something.</h2>
+      <p>Add the action that completes a quest, awards its XP once, and updates the board.</p>
+      <div class="steps">
+        <div><span>01</span><p><strong>Brief</strong>Define the result and the edge cases.</p></div>
+        <div><span>02</span><p><strong>Inspect & plan</strong>Understand the existing code before editing.</p></div>
+        <div><span>03</span><p><strong>Build</strong>Make one bounded change.</p></div>
+        <div><span>04</span><p><strong>Verify</strong>Check the behavior, not just the agent’s reply.</p></div>
+      </div>
+      <div class="constraint-box"><strong>Keep it small.</strong><span>No backend, accounts, packages, or model API in this application. State resets on refresh.</span></div>
+      <a class="button secondary full" href="tests.html">Open verification checks</a>
+      <button class="reset-button" id="reset" type="button">Reset this demo</button>
+      <p class="panel-footnote">Open <code>WORKSHOP.md</code> for the task brief and completion checklist.</p>
+    </aside>
+  </main>
+  <footer>HackManila × SageDynamics <span>Venue: Vantis.ph · Community support: ARK</span></footer>
+  <noscript><p>This exercise needs JavaScript enabled in your browser.</p></noscript>
+</body>
+</html>

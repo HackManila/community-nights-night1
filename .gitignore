@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+*.log
+.organizer/
+
+slides/*
+!slides/HackManila_Night1.pdf
+*.tmp
+PRIVATE-*.csv

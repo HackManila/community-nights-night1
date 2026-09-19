@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Quest Board — Verification</title><link rel="stylesheet" href="styles.css"><script src="game.js" defer></script><script src="checks.js" defer></script><script src="tests-ui.js" defer></script></head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">HM</span><span>HackManila <small>COMMUNITY NIGHTS</small></span></a><a class="text-link" href="index.html">Back to quest board</a></header>
+<main class="checks-main"><div class="eyebrow">VERIFY THE CHANGE</div><h1>Show the evidence.</h1><p class="intro">Baseline checks protect existing behavior. Acceptance checks specify the feature you are building.</p>
+<div class="notice">Debug exercise: this build has a deliberate state-transition defect. Baseline checks should pass; acceptance checks should expose the failure. Do not change the checks to hide it.</div>
+<div class="check-toolbar"><button class="button" type="button" data-suite="baseline">Run baseline checks</button><button class="button secondary" type="button" data-suite="acceptance">Run acceptance checks</button><button class="button secondary" type="button" data-suite="all">Run all checks</button></div>
+<div class="check-summary" id="check-summary" role="status" aria-live="polite">Choose a check suite.</div><ol class="check-results" id="check-results"></ol>
+<p class="intro">These are game-state checks, not complete UI coverage. Also click through the board, inspect the diff, and record what you did not test. Refresh this page after source-code edits.</p>
+</main>
+</body></html>
